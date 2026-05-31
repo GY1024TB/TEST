@@ -17,41 +17,7 @@ namespace NCatTelnetTool.Forms
         {
             InitializeComponent();
             InitializeData();
-            InitializeCommandProxyButtons();
         }
-
-        private void InitializeCommandProxyButtons()
-        {
-            // 重新调整列表高度以腾出按钮空间
-            lstCommandProxies.Size = new System.Drawing.Size(280, 212);
-            
-            // 删除按钮
-            btnDeleteCommandProxy = new System.Windows.Forms.Button();
-            btnDeleteCommandProxy.Text = "删除";
-            btnDeleteCommandProxy.Size = new System.Drawing.Size(65, 23);
-            btnDeleteCommandProxy.Location = new System.Drawing.Point(10, 265);
-            btnDeleteCommandProxy.UseVisualStyleBackColor = true;
-            btnDeleteCommandProxy.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
-            btnDeleteCommandProxy.Click += new System.EventHandler(this.btnDeleteCommandProxy_Click);
-            grpCommandProxies.Controls.Add(btnDeleteCommandProxy);
-
-            // 修改按钮
-            btnEditCommandProxy = new System.Windows.Forms.Button();
-            btnEditCommandProxy.Text = "修改";
-            btnEditCommandProxy.Size = new System.Drawing.Size(75, 23);
-            btnEditCommandProxy.Location = new System.Drawing.Point(75, 265);
-            btnEditCommandProxy.UseVisualStyleBackColor = true;
-            btnEditCommandProxy.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
-            btnEditCommandProxy.Click += new System.EventHandler(this.btnEditCommandProxy_Click);
-            grpCommandProxies.Controls.Add(btnEditCommandProxy);
-
-            // 添加按钮 - 移动到右边并改短名
-            btnAddCommandProxy.Text = "添加";
-            btnAddCommandProxy.Location = new System.Drawing.Point(150, 265);
-        }
-
-        private System.Windows.Forms.Button btnEditCommandProxy;
-        private System.Windows.Forms.Button btnDeleteCommandProxy;
 
         private void InitializeData()
         {
