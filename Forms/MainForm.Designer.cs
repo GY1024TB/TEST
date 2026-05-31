@@ -25,9 +25,9 @@ namespace NCatTelnetTool.Forms
             this.btnAddConnection = new System.Windows.Forms.Button();
             this.lstConnections = new System.Windows.Forms.ListBox();
             this.grpCommandProxies = new System.Windows.Forms.GroupBox();
-            this.btnAddCommandProxy = new System.Windows.Forms.Button();
-            this.btnEditCommandProxy = new System.Windows.Forms.Button();
             this.btnDeleteCommandProxy = new System.Windows.Forms.Button();
+            this.btnEditCommandProxy = new System.Windows.Forms.Button();
+            this.btnAddCommandProxy = new System.Windows.Forms.Button();
             this.lstCommandProxies = new System.Windows.Forms.ListBox();
             this.grpTerminal = new System.Windows.Forms.GroupBox();
             this.btnClearTerminal = new System.Windows.Forms.Button();
