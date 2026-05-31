@@ -79,6 +79,44 @@ namespace NCatTelnetTool.Forms
             }
         }
 
+        private void btnEditCommandProxy_Click(object sender, EventArgs e)
+        {
+            if (lstCommandProxies.SelectedItem is CommandProxy proxy)
+            {
+                using (var form = new AddCommandProxyForm(proxy))
+                {
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        RefreshCommandProxyList();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("请先选择要修改的命令代理", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnDeleteCommandProxy_Click(object sender, EventArgs e)
+        {
+            if (lstCommandProxies.SelectedItem is CommandProxy proxy)
+            {
+                if (MessageBox.Show(
+                    string.Format("确定要删除命令代理 \"{0}\" 吗？", proxy.ChineseName),
+                    "确认删除",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    commandProxies.Remove(proxy);
+                    RefreshCommandProxyList();
+                }
+            }
+            else
+            {
+                MessageBox.Show("请先选择要删除的命令代理", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void btnConnectSingle_Click(object sender, EventArgs e)
         {
             if (lstConnections.SelectedItem is ConnectionInfo conn)

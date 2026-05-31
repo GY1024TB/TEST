@@ -26,6 +26,8 @@ namespace NCatTelnetTool.Forms
             this.lstConnections = new System.Windows.Forms.ListBox();
             this.grpCommandProxies = new System.Windows.Forms.GroupBox();
             this.btnAddCommandProxy = new System.Windows.Forms.Button();
+            this.btnEditCommandProxy = new System.Windows.Forms.Button();
+            this.btnDeleteCommandProxy = new System.Windows.Forms.Button();
             this.lstCommandProxies = new System.Windows.Forms.ListBox();
             this.grpTerminal = new System.Windows.Forms.GroupBox();
             this.btnClearTerminal = new System.Windows.Forms.Button();
@@ -166,6 +168,8 @@ namespace NCatTelnetTool.Forms
             // 
             // grpCommandProxies
             // 
+            this.grpCommandProxies.Controls.Add(this.btnDeleteCommandProxy);
+            this.grpCommandProxies.Controls.Add(this.btnEditCommandProxy);
             this.grpCommandProxies.Controls.Add(this.btnAddCommandProxy);
             this.grpCommandProxies.Controls.Add(this.lstCommandProxies);
             this.grpCommandProxies.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -179,13 +183,35 @@ namespace NCatTelnetTool.Forms
             // btnAddCommandProxy
             // 
             this.btnAddCommandProxy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddCommandProxy.Location = new System.Drawing.Point(215, 265);
+            this.btnAddCommandProxy.Location = new System.Drawing.Point(150, 265);
             this.btnAddCommandProxy.Name = "btnAddCommandProxy";
             this.btnAddCommandProxy.Size = new System.Drawing.Size(75, 23);
             this.btnAddCommandProxy.TabIndex = 1;
-            this.btnAddCommandProxy.Text = "添加代理";
+            this.btnAddCommandProxy.Text = "添加";
             this.btnAddCommandProxy.UseVisualStyleBackColor = true;
             this.btnAddCommandProxy.Click += new System.EventHandler(this.btnAddCommandProxy_Click);
+            // 
+            // btnEditCommandProxy
+            // 
+            this.btnEditCommandProxy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditCommandProxy.Location = new System.Drawing.Point(75, 265);
+            this.btnEditCommandProxy.Name = "btnEditCommandProxy";
+            this.btnEditCommandProxy.Size = new System.Drawing.Size(75, 23);
+            this.btnEditCommandProxy.TabIndex = 2;
+            this.btnEditCommandProxy.Text = "修改";
+            this.btnEditCommandProxy.UseVisualStyleBackColor = true;
+            this.btnEditCommandProxy.Click += new System.EventHandler(this.btnEditCommandProxy_Click);
+            // 
+            // btnDeleteCommandProxy
+            // 
+            this.btnDeleteCommandProxy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDeleteCommandProxy.Location = new System.Drawing.Point(10, 265);
+            this.btnDeleteCommandProxy.Name = "btnDeleteCommandProxy";
+            this.btnDeleteCommandProxy.Size = new System.Drawing.Size(65, 23);
+            this.btnDeleteCommandProxy.TabIndex = 3;
+            this.btnDeleteCommandProxy.Text = "删除";
+            this.btnDeleteCommandProxy.UseVisualStyleBackColor = true;
+            this.btnDeleteCommandProxy.Click += new System.EventHandler(this.btnDeleteCommandProxy_Click);
             // 
             // lstCommandProxies
             // 
@@ -195,7 +221,7 @@ namespace NCatTelnetTool.Forms
             this.lstCommandProxies.FormattingEnabled = true;
             this.lstCommandProxies.Location = new System.Drawing.Point(10, 20);
             this.lstCommandProxies.Name = "lstCommandProxies";
-            this.lstCommandProxies.Size = new System.Drawing.Size(280, 238);
+            this.lstCommandProxies.Size = new System.Drawing.Size(280, 212);
             this.lstCommandProxies.TabIndex = 0;
             this.lstCommandProxies.DoubleClick += new System.EventHandler(this.lstCommandProxies_DoubleClick);
             // 
@@ -308,6 +334,8 @@ namespace NCatTelnetTool.Forms
         private System.Windows.Forms.Button btnConnectSingle;
         private System.Windows.Forms.ListBox lstCommandProxies;
         private System.Windows.Forms.Button btnAddCommandProxy;
+        private System.Windows.Forms.Button btnEditCommandProxy;
+        private System.Windows.Forms.Button btnDeleteCommandProxy;
         private System.Windows.Forms.RichTextBox txtTerminal;
         private System.Windows.Forms.TextBox txtCommand;
         private System.Windows.Forms.Button btnSendCommand;
